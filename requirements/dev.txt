@@ -1,0 +1,8 @@
+# Tests and code quality. Install on top of a backend file, e.g.
+#   pip install -r requirements/onnx.txt -r requirements/dev.txt
+pytest==9.1.1
+pytest-cov==7.1.0
+pillow==12.3.0          # used by the tests to build synthetic PDFs
+ruff==0.16.8
+mypy==2.3.1
+types-PyYAML==6.0.12.20260906

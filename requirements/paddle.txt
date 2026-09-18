@@ -1,0 +1,6 @@
+# Default OCR backend: PaddleOCR 3.x with PP-OCRv5 Mobile (Technical Design §3.1).
+# OpenCV: paddlex requires opencv-contrib-python, so that is the one OpenCV package installed here.
+-r base.txt
+paddlepaddle==3.2.2
+paddleocr==3.3.3
+opencv-contrib-python==4.10.0.84

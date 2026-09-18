@@ -1,0 +1,159 @@
+# Question Marker Detector - default configuration
+# ---------------------------------------------------------------------------
+# Every value here can be overridden by an environment variable (or .env):
+#   QMD_<SECTION>__<KEY>=value      e.g.  QMD_OCR__BACKEND=onnx
+# and some by command-line options (see `qmd run --help`).
+#
+# Physical sizes are in millimetres (*_mm) and are converted to pixels using
+# each page's own dpi, because page pixel sizes vary (Requirements §2.4).
+# Thresholds marked (PROVISIONAL) must be re-tuned on labelled data (TD §19).
+# ---------------------------------------------------------------------------
+
+app:
+  log_level: INFO            # DEBUG | INFO | WARNING | ERROR
+  log_format: text           # text | json
+  output_root: ./output
+  save_page_images: true     # pages/page_NNN.jpg (original scan bytes, no re-encoding)
+  save_debug_images: true    # debug/page_NNN_overlay.jpg + page_NNN_margin.png
+  save_marker_crops: true    # crops/page_NNN_cMM.png (exact recognizer input)
+  print_discarded: false
+
+processing:
+  config_version: "1.1.0"    # bump when processing meaning changes (part of processing_version)
+  workers: 1                 # parallel page workers (processes)
+  max_attempts: 2            # retries for temporary failures (FR-16)
+
+pdf:
+  canonical_dpi: 200         # only used when a page has no single full-page scan image
+  full_page_image_min_coverage: 0.9
+
+# Booklet template (Requirements FR-19). Page roles are per BOOKLET, not per exam.
+# Pages not listed get default_role. Non-ANSWER pages are not decoded or OCR'd (NFR-09).
+booklet:
+  template_id: christ_ug_main_answer_booklet_v1
+  default_role: ANSWER
+  page_roles:
+    1: COVER                 # marks grid + barcode label (personal data)
+    2: DO_NOT_WRITE
+
+layout:
+  margin_search_max_fraction: 0.25     # search the margin rule in the left 25% of the page
+  margin_rule_min_length_fraction: 0.30
+  edge_ignore_mm: 1.0                  # ignore the scanner's dark page edge
+  header_search_max_fraction: 0.20
+  line_pitch_min_mm: 6.0
+  line_pitch_max_mm: 13.0
+  min_ruled_lines: 5
+  line_snap_tolerance_fraction: 0.25   # snap predicted ruled lines within 25% of the pitch
+  deskew_threshold_deg: 0.4
+  max_skew_deg: 5.0
+
+region:
+  spill_mm: 6.0              # region extends this far right of the margin rule
+  top_offset_mm: 2.0
+  rule_mask_half_width_mm: 0.6
+  fallback_region_width_mm: 30.0
+
+ink:
+  enable_colour_separation: true       # remove valuer red/green ink (FR-18)
+  red_hue_ranges: [[0, 12], [165, 179]]
+  green_hue_range: [35, 90]
+  min_saturation: 70
+  min_value: 50
+  dark_ink_threshold: 150              # excludes watermark and show-through
+  grayscale_channel_spread_min: 2.0   # below -> treated as grayscale scan
+
+triage:
+  scale: 0.5
+  min_component_area_mm2: 1.0
+  blank_max_components: 2
+  sparse_max_components: 40
+
+detection:
+  method: margin_components            # margin_components | ocr_model  (README A-4)
+  min_candidate_height_mm: 2.5
+  max_component_height_mm: 25.0
+  min_component_area_mm2: 0.4
+  merge_gap_mm: 6.0
+  crop_padding_mm: 1.0
+  single_char_max_aspect: 1.3         # README A-9
+  tile_height_lines: 4                 # ocr_model only
+  tile_overlap_lines: 1
+  nms_iou: 0.3
+
+ocr:
+  backend: paddle                      # paddle (PP-OCRv5 Mobile, TD §3.1) | onnx
+  det_model_name: PP-OCRv5_mobile_det
+  rec_model_name: PP-OCRv5_mobile_rec
+  det_model_dir: null                  # set for offline/pinned model bundles (TD §28)
+  rec_model_dir: null
+  enable_mkldnn: true
+  onnx_det_model_path: null            # onnx backend; null = models bundled with rapidocr
+  onnx_rec_model_path: null
+  onnx_rec_keys_path: null
+  threads_per_worker: 2                # workers x threads ~= physical cores (TD §21)
+  det_box_thresh: 0.4
+  det_thresh: 0.3
+  det_unclip_ratio: 1.6
+  rec_batch_size: 8
+  calibration_file: null               # TD §19.2; null = uncalibrated raw scores
+
+grammar:
+  version: "1.0"
+  prefixes: [ANSWER, ANS, AN, QUESTION, QUES, QNO, QN, Q, "NO"]
+  max_prefix_residue_chars: 2
+  max_noise_digits: 1
+  max_first_number_digits: 3
+  max_sub_number_digits: 2
+  header_lookahead_lines: 2
+
+resolution:
+  version: "1.0"
+  match_threshold: 0.60                # (PROVISIONAL)
+  margin_threshold: 0.20               # (PROVISIONAL)
+  noise_penalty: 0.15
+  trim_penalty: 0.10
+  insert_cost: 1.0
+  delete_cost: 1.0
+  default_substitute_cost: 1.0
+  # [ocr_char, expected_char, cost]; "" = cheap deletion (closing bracket misread)
+  confusions:
+    - ["6", "b", 0.3]
+    - ["b", "6", 0.3]
+    - ["l", "1", 0.2]
+    - ["i", "1", 0.3]
+    - ["1", "i", 0.3]
+    - ["|", "1", 0.2]
+    - ["o", "0", 0.2]
+    - ["0", "o", 0.3]
+    - ["d", "0", 0.5]
+    - ["s", "5", 0.3]
+    - ["5", "s", 0.3]
+    - ["z", "2", 0.3]
+    - ["2", "z", 0.3]
+    - ["g", "9", 0.3]
+    - ["q", "9", 0.3]
+    - ["9", "g", 0.3]
+    - ["t", "7", 0.4]
+    - ["b", "8", 0.3]
+    - ["8", "b", 0.4]
+    - ["a", "9", 0.5]
+    - ["1", "", 0.4]
+    - ["7", "", 0.5]
+    - ["j", "", 0.4]
+    - ["l", "", 0.4]
+    - [")", "", 0.1]
+
+question_start:
+  max_lines_below: 3
+  min_ink_ratio: 0.004
+  start_padding_mm: 0.0
+  right_margin_mm: 5.0
+  fallback_offset_mm: 5.0
+
+gate:                                  # all (PROVISIONAL)
+  min_recognition_confidence: 0.80
+  adjusted_parse_min_confidence: 0.92  # NOISE_STRIPPED / LINE_TRIMMED readings
+  grayscale_min_confidence: 0.90
+  min_resolution_margin: 0.20
+  min_question_start_confidence: 0.60

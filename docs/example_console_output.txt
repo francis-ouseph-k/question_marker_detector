@@ -1,0 +1,84 @@
+
+==============================================================================================================
+SCRIPT Doc0697   pages=20   exam=ENG221-ESE-2023   question_list=ENG221-ESE-2023:2023-05-05
+source=/tmp/scans/Doc0697.pdf   processing_version=1.1.0+454f63e19d   time=3.6s
+ocr=rapidocr-3.9.2/onnxruntime-1.30.0  model=bundled:PP-OCRv6_rec_small.onnx@sha256:6f327246b503
+Coordinates: CANONICAL_PAGE_PX (native scan pixels, origin top-left)
+--------------------------------------------------------------------------------------------------------------
+PAGES
+  p001 COVER        SKIPPED_BY_ROLE  TEMPLATE markers=0                         
+  p002 DO_NOT_WRITE SKIPPED_BY_ROLE  TEMPLATE markers=0                         
+  p003 ANSWER       PROCESSED        NORMAL   markers=1  1500x2572@200dpi       rule_x=70 lines=31 skew=-0.20
+  p004 ANSWER       PROCESSED        NORMAL   markers=1  1496x2574@200dpi       rule_x=187 lines=32 skew=+0.27
+  p005 ANSWER       PROCESSED        NORMAL   markers=1  1504x2572@200dpi       rule_x=86 lines=32 skew=-0.17
+  p006 ANSWER       PROCESSED        NORMAL   markers=0  1492x2574@200dpi       rule_x=191 lines=32 skew=-0.15
+  p007 ANSWER       PROCESSED        NORMAL   markers=1  1504x2572@200dpi       rule_x=90 lines=31 skew=-0.30
+  p008 ANSWER       PROCESSED        NORMAL   markers=0  1496x2572@200dpi       rule_x=167 lines=31 skew=+0.15
+  p009 ANSWER       PROCESSED        NORMAL   markers=1  1492x2568@200dpi       rule_x=100 lines=31 skew=-0.18
+  p010 ANSWER       PROCESSED        NORMAL   markers=0  1492x2568@200dpi       rule_x=177 lines=31 skew=-0.20
+  p011 ANSWER       PROCESSED        NORMAL   markers=0  1492x2566@200dpi       rule_x=101 lines=31 skew=+0.15
+  p012 ANSWER       PROCESSED        NORMAL   markers=1  1492x2566@200dpi       rule_x=170 lines=31 skew=-0.48
+  p013 ANSWER       PROCESSED        NORMAL   markers=0  1504x2568@200dpi       rule_x=92 lines=31 skew=+0.12
+  p014 ANSWER       PROCESSED        NORMAL   markers=1  1500x2568@200dpi       rule_x=166 lines=31 skew=-0.14
+  p015 ANSWER       PROCESSED        SPARSE   markers=0  1504x2576@200dpi       rule_x=115 lines=31 skew=+0.11
+  p016 ANSWER       PROCESSED        BLANK    markers=0  1500x2574@200dpi       rule_x=165 lines=31 skew=-0.24
+  p017 ANSWER       PROCESSED        BLANK    markers=0  1500x2568@200dpi       rule_x=103 lines=31 skew=+0.16
+  p018 ANSWER       PROCESSED        SPARSE   markers=0  1500x2568@200dpi       rule_x=152 lines=31 skew=-0.33
+  p019 ANSWER       PROCESSED        SPARSE   markers=0  1504x2574@200dpi       rule_x=100 lines=31 skew=+0.16
+  p020 ANSWER       PROCESSED        SPARSE   markers=0  1496x2572@200dpi       rule_x=180 lines=31 skew=+0.02
+--------------------------------------------------------------------------------------------------------------
+MARKERS  (page, question, status, raw OCR, recognition/resolution confidence, method, marker box, answer start)
+  p003  1          REVIEW_REQUIRED raw='1)'           rec=0.45 res=1.00 EXACT_UNIQUE       box=(34,497,18x55) start=(70,458) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE]
+  p004  2          ACCEPTED        raw='2'            rec=0.99 res=1.00 EXACT_UNIQUE       box=(24,562,35x70) start=(187,537) LANDMARK_LINE c=0.95
+  p005  3          ACCEPTED        raw='3).'          rec=0.92 res=1.00 EXACT_UNIQUE       box=(0,1007,64x73) start=(86,986) LANDMARK_LINE c=0.95
+  p007  5          REVIEW_REQUIRED raw='25).'         rec=0.74 res=0.85 EXACT_UNIQUE       box=(0,415,68x61) start=(90,384) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE]  flags=NOISE_STRIPPED
+  p009  ?1         UNRESOLVED      raw='N00)'         rec=0.62 res=0.00 NONE               box=(0,424,93x78) start=(100,400) LANDMARK_LINE c=0.95  [NO_MATCH]  flags=PREFIX_RESIDUE
+  p012  7          REVIEW_REQUIRED raw='aN.7)'        rec=0.62 res=1.00 EXACT_UNIQUE       box=(15,416,141x46) start=(178,381) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE]
+  p014  -          UNRESOLVED      raw='No'           rec=0.87 res=  -  NONE               box=(40,335,110x59) start=(166,377) LANDMARK_LINE c=0.85  [PREFIX_WITHOUT_ID]
+--------------------------------------------------------------------------------------------------------------
+SUMMARY  ACCEPTED=2  DISCARDED=2  REVIEW_REQUIRED=3  UNRESOLVED=2   (discarded candidates hidden: 2; use --show-discarded)
+==============================================================================================================
+
+==============================================================================================================
+SCRIPT Doc0711   pages=20   exam=ENG221-ESE-2023   question_list=ENG221-ESE-2023:2023-05-05
+source=/tmp/scans/Doc0711.pdf   processing_version=1.1.0+454f63e19d   time=3.9s
+ocr=rapidocr-3.9.2/onnxruntime-1.30.0  model=bundled:PP-OCRv6_rec_small.onnx@sha256:6f327246b503
+Coordinates: CANONICAL_PAGE_PX (native scan pixels, origin top-left)
+--------------------------------------------------------------------------------------------------------------
+PAGES
+  p001 COVER        SKIPPED_BY_ROLE  TEMPLATE markers=0                         
+  p002 DO_NOT_WRITE SKIPPED_BY_ROLE  TEMPLATE markers=0                         
+  p003 ANSWER       PROCESSED        NORMAL   markers=2  1488x2576@200dpi       rule_x=58 lines=32 skew=-0.15
+  p004 ANSWER       PROCESSED        NORMAL   markers=0  1484x2576@200dpi       rule_x=185 lines=31 skew=+0.13
+  p005 ANSWER       PROCESSED        NORMAL   markers=1  1488x2564@200dpi       rule_x=70 lines=31 skew=-0.17
+  p006 ANSWER       PROCESSED        NORMAL   markers=1  1488x2564@200dpi       rule_x=181 lines=31 skew=-0.52
+  p007 ANSWER       PROCESSED        NORMAL   markers=1  1488x2576@200dpi       rule_x=72 lines=31 skew=-0.24
+  p008 ANSWER       PROCESSED        NORMAL   markers=1  1488x2572@200dpi       rule_x=169 lines=31 skew=+0.02
+  p009 ANSWER       PROCESSED        NORMAL   markers=1  1492x2572@200dpi       rule_x=82 lines=31 skew=-0.23
+  p010 ANSWER       PROCESSED        NORMAL   markers=1  1488x2574@200dpi       rule_x=182 lines=31 skew=+0.11
+  p011 ANSWER       PROCESSED        NORMAL   markers=0  1488x2566@200dpi       rule_x=88 lines=31 skew=+0.11
+  p012 ANSWER       PROCESSED        BLANK    markers=0  1488x2566@200dpi       rule_x=164 lines=31 skew=-0.74
+  p013 ANSWER       PROCESSED        BLANK    markers=0  1484x2576@200dpi       rule_x=76 lines=31 skew=+0.01
+  p014 ANSWER       PROCESSED        BLANK    markers=0  1484x2574@200dpi       rule_x=163 lines=31 skew=-0.26
+  p015 ANSWER       PROCESSED        BLANK    markers=0  1480x2576@200dpi       rule_x=90 lines=31 skew=-0.05
+  p016 ANSWER       PROCESSED        BLANK    markers=0  1480x2576@200dpi       rule_x=164 lines=31 skew=-0.31
+  p017 ANSWER       PROCESSED        BLANK    markers=0  1480x2576@200dpi       rule_x=86 lines=31 skew=+0.18
+  p018 ANSWER       PROCESSED        BLANK    markers=0  1480x2576@200dpi       rule_x=151 lines=31 skew=-0.22
+  p019 ANSWER       PROCESSED        BLANK    markers=0  1488x2568@200dpi       rule_x=77 lines=31 skew=-0.04
+  p020 ANSWER       PROCESSED        BLANK    markers=0  1488x2566@200dpi       rule_x=185 lines=31 skew=+0.01
+--------------------------------------------------------------------------------------------------------------
+MARKERS  (page, question, status, raw OCR, recognition/resolution confidence, method, marker box, answer start)
+  p003  1          REVIEW_REQUIRED raw='1'            rec=0.80 res=1.00 EXACT_UNIQUE       box=(0,425,32x31) start=(58,384) LANDMARK_LINE c=0.95  [DUPLICATE_IN_SCRIPT]
+  p003  2          ACCEPTED        raw='n82'          rec=0.98 res=0.85 EXACT_UNIQUE       box=(0,2132,53x38) start=(58,2094) LANDMARK_LINE c=0.95  flags=PREFIX_RESIDUE,NOISE_STRIPPED
+  p005  3          REVIEW_REQUIRED raw='63.'          rec=0.89 res=0.85 EXACT_UNIQUE       box=(0,282,51x34) start=(70,246) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE]  flags=NOISE_STRIPPED
+  p006  5          REVIEW_REQUIRED raw='Ans 5'        rec=0.84 res=1.00 EXACT_UNIQUE       box=(46,415,105x44) start=(190,384) LANDMARK_LINE c=0.95  [OUT_OF_ORDER]
+  p007  ?6         UNRESOLVED      raw='186'          rec=1.00 res=0.53 NONE               box=(0,413,52x39) start=(72,385) LANDMARK_LINE c=0.95  [NO_MATCH]
+  p008  1          REVIEW_REQUIRED raw='1'            rec=0.77 res=1.00 EXACT_UNIQUE       box=(85,2100,73x78) start=(169,2090) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE,DUPLICATE_IN_SCRIPT,OUT_OF_ORDER]
+  p009  7          REVIEW_REQUIRED raw='67'           rec=0.77 res=0.85 EXACT_UNIQUE       box=(0,653,42x36) start=(82,618) LANDMARK_LINE c=0.95  [LOW_RECOGNITION_CONFIDENCE]  flags=NOISE_STRIPPED
+  p010  8          ACCEPTED        raw='Ans8'         rec=0.92 res=1.00 EXACT_UNIQUE       box=(40,1239,104x48) start=(182,1214) LANDMARK_LINE c=0.95
+--------------------------------------------------------------------------------------------------------------
+SUMMARY  ACCEPTED=2  DISCARDED=3  REVIEW_REQUIRED=5  UNRESOLVED=1   (discarded candidates hidden: 3; use --show-discarded)
+SCRIPT FLAGS: DUPLICATE_QUESTION, OUT_OF_ORDER
+  - Question 1 appears 2 times (pages 3, 8)
+  - Question 1 (page 8) after 5 (page 6)
+==============================================================================================================

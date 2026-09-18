@@ -1,0 +1,12 @@
+2026-09-18 07:35:35,486 INFO    [MainProcess] qmd.question_list: Loaded question list ENG221-ESE-2023:2023-05-05: 8 IDs (8 resolution targets)
+2026-09-18 07:35:35,486 INFO    [MainProcess] qmd: Processing 2 PDF(s) with backend=onnx detector=margin_components workers=1 -> /tmp/qmd_out
+2026-09-18 07:35:36,037 WARNING [MainProcess] qmd.ocr.onnx_backend: ONNX backend is using the models bundled with rapidocr (bundled:PP-OCRv6_small_rec), not PP-OCRv5 Mobile. Set ocr.onnx_*_model_path to use a specific model.
+2026-09-18 07:35:36,038 INFO    [MainProcess] qmd.runner: === script Doc0697 (/tmp/scans/Doc0697.pdf) ===
+2026-09-18 07:35:36,053 INFO    [MainProcess] qmd.pipeline: page 1: skipped (role COVER)
+2026-09-18 07:35:36,053 INFO    [MainProcess] qmd.pipeline: page 2: skipped (role DO_NOT_WRITE)
+2026-09-18 07:35:36,295 INFO    [MainProcess] qmd.pipeline: page 3: NORMAL, 342 ink components, layout=ok, 2 candidates -> 1 markers (241 ms)
+2026-09-18 07:35:36,490 INFO    [MainProcess] qmd.pipeline: page 4: NORMAL, 313 ink components, layout=ok, 1 candidates -> 1 markers (195 ms)
+2026-09-18 07:35:36,710 INFO    [MainProcess] qmd.pipeline: page 5: NORMAL, 295 ink components, layout=ok, 2 candidates -> 1 markers (218 ms)
+2026-09-18 07:35:36,880 INFO    [MainProcess] qmd.pipeline: page 6: NORMAL, 166 ink components, layout=ok, 0 candidates -> 0 markers (169 ms)
+2026-09-18 07:35:37,059 INFO    [MainProcess] qmd.pipeline: page 7: NORMAL, 236 ink components, layout=ok, 1 candidates -> 1 markers (177 ms)
+2026-09-18 07:35:37,240 INFO    [MainProcess] qmd.pipeline: page 8: NORMAL, 48 ink components, layout=ok, 0 candidates -> 0 markers (181 ms)

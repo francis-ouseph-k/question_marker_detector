@@ -1,0 +1,10 @@
+# Core runtime dependencies (pinned, tested versions).
+# OpenCV is NOT listed here: each OCR backend needs a specific OpenCV package,
+# and two OpenCV packages in one environment break `import cv2`.
+# Install one backend file (paddle.txt or onnx.txt), not base.txt on its own.
+numpy==2.4.6
+pypdfium2==5.13.0
+pydantic==2.13.5
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+PyYAML>=6.0,<7          # range: paddlex pins its own exact PyYAML version

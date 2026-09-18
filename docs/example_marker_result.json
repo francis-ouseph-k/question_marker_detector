@@ -1,0 +1,85 @@
+{
+  "marker_result_id": "7bcd2f3c1344e15c",
+  "script_id": "Doc0711",
+  "page_id": "Doc0711-P010",
+  "page_index": 10,
+  "processing_version": "1.1.0+454f63e19d",
+  "line_index": 13,
+  "raw_ocr_text": "Ans8",
+  "parsed_marker": "8",
+  "normalized_marker": "8",
+  "canonical_question_id": "8",
+  "candidate_list": [
+    {
+      "question_id": "8",
+      "score": 1.0
+    },
+    {
+      "question_id": "1",
+      "score": 0.0
+    },
+    {
+      "question_id": "2",
+      "score": 0.0
+    },
+    {
+      "question_id": "3",
+      "score": 0.0
+    },
+    {
+      "question_id": "4",
+      "score": 0.0
+    }
+  ],
+  "resolution_method": "EXACT_UNIQUE",
+  "parse_flags": [],
+  "detection_confidence": 1.0,
+  "recognition_confidence": 0.9166,
+  "recognition_confidence_raw": 0.9166,
+  "resolution_confidence": 1.0,
+  "resolution_margin": 1.0,
+  "coordinate_system": "CANONICAL_PAGE_PX",
+  "page_image_width": 1488,
+  "page_image_height": 2574,
+  "page_image_dpi": 200.0,
+  "marker_polygon": [
+    [
+      40,
+      1239
+    ],
+    [
+      144,
+      1239
+    ],
+    [
+      144,
+      1287
+    ],
+    [
+      40,
+      1287
+    ]
+  ],
+  "marker_x": 40,
+  "marker_y": 1239,
+  "marker_width": 104,
+  "marker_height": 48,
+  "question_start_x": 182,
+  "question_start_y": 1214,
+  "question_start_method": "LANDMARK_LINE",
+  "question_start_confidence": 0.95,
+  "status": "ACCEPTED",
+  "review_reasons": [],
+  "discard_reason": null,
+  "source": "AUTOMATIC",
+  "ocr_engine": "rapidocr-3.9.2/onnxruntime-1.30.0",
+  "ocr_model": "bundled:PP-OCRv6_rec_small.onnx@sha256:6f327246b503",
+  "ocr_model_version": "rapidocr==3.9.2",
+  "preprocessing_version": "qmd-1.0.0/layout-1/ink-1",
+  "grammar_version": "1.0",
+  "parser_version": "qmd-1.0.0",
+  "question_list_version": "ENG221-ESE-2023:2023-05-05",
+  "config_version": "1.1.0+454f63e19d",
+  "created_at": "2026-09-18T08:27:34+00:00",
+  "debug_crop_path": "crops/page_010_c03.png"
+}

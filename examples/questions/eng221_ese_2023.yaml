@@ -1,0 +1,16 @@
+# Example question list for the sample scripts (ENG221 English-II, End Semester 2023).
+# In production this file is generated from the question paper for each exam.
+exam_id: ENG221-ESE-2023
+version: "2023-05-05"
+questions:
+  - "1"
+  - "2"
+  - "3"
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+  - "8"
+answering_rules:
+  min_answers: 1
+  max_answers: 8

@@ -1,0 +1,15 @@
+# Example of a multi-level question list (Problem Statement §5).
+exam_id: DEMO-MULTILEVEL
+version: "1"
+questions:
+  - "1"
+  - "2"
+  - "3"
+  - "4(a)"
+  - "4(b)"
+  - "5(a)(i)"
+  - "5(a)(ii)"
+  - id: "10(b)"
+    target: true        # students may label the whole part "10(b)"
+  - "10(b)(1)"
+  - "10(b)(2)"

@@ -1,0 +1,6 @@
+# Alternative OCR backend: PP-OCR models on ONNX Runtime via RapidOCR. Works offline.
+# OpenCV: rapidocr requires opencv-python.
+-r base.txt
+rapidocr==3.9.2
+onnxruntime==1.30.0
+opencv-python==5.0.0.93

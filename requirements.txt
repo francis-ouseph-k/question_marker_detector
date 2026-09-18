@@ -1,0 +1,8 @@
+# Default install = PaddleOCR PP-OCRv5 Mobile backend (Technical Design §3.1).
+#   pip install -r requirements.txt && pip install -e . --no-deps
+#
+# Other options:
+#   requirements/onnx.txt   ONNX Runtime backend (offline, no model download)
+#   requirements/dev.txt    tests + linters (add to either backend)
+#   requirements/lock-onnx-py311.txt   exact full environment used for the tested ONNX setup
+-r requirements/paddle.txt
